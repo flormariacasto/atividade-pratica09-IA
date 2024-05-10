@@ -1,0 +1,24 @@
+class AgenteLogico:
+  def _init_(self):
+      self.nome = "Agente Lógico"
+
+  def saudacao(self):
+      return "Olá! Eu sou um agente lógico de inteligência artificial."
+
+  def responder(self, pergunta):
+      pergunta = pergunta.lower()
+
+      if "como você está" in pergunta:
+          return "Estou bem, obrigado por perguntar!"
+      elif "qual é o seu nome" in pergunta:
+          return "Meu nome é " + self.nome + ". Como posso ajudar você hoje?"
+      elif "o que você pode fazer" in pergunta:
+          return "Posso responder a perguntas simples e ajudar com problemas lógicos."
+      else:
+          return "Desculpe, não entendi sua pergunta. Posso ajudar com algo mais?"
+
+# Teste do agente
+agente = AgenteLogico()
+print(agente.saudacao())
+pergunta = input("Faça uma pergunta: ")
+print(agente.responder(pergunta))
